@@ -1,0 +1,26 @@
+import java.util.*;
+public class equations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int [] equation1 = new int [3];
+		int [] equation2 = new int [3];
+		String eq1 = sc.nextLine();
+		int idx = eq1.indexOf("x");
+		String v1 = eq1.substring(0, idx);
+		System.out.println(v1);
+//		System.out.println();
+//		System.out.println(Det(2,3,3,2));
+//		System.out.println(Det(4,3,6,2));
+//		System.out.println(Det(2,4,3,6));
+		
+		
+	}
+	
+	public static int Det (int a,int b,int c,int d){
+		return a*d - b*c;
+	}
+	
+
+}

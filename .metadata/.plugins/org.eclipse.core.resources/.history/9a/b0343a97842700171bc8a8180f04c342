@@ -1,0 +1,18 @@
+import java.util.*;
+public class collection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int cases = sc.nextInt();
+		int m,r; //m = number of movies r= number of requests
+		ArrayList<Integer> stack = new ArrayList<Integer>(); 
+		for(int ts=0;ts<cases;ts++){
+			 m =sc.nextInt();
+			 r = m =sc.nextInt();
+			System.out.println("one");
+		}
+
+	}
+
+}

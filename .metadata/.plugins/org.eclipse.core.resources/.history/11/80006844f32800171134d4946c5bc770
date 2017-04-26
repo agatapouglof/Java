@@ -1,0 +1,37 @@
+import java.util.*;
+public class equations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int [] equation1 = new int [3];
+		int [] equation2 = new int [3];
+		String eq1 = sc.nextLine();
+		int idx = eq1.indexOf("x");
+		String [] valstr1 = new String [3];
+		 valstr1[0] = eq1.substring(0, idx);
+		 valstr1[1] = eq1.substring(eq1.indexOf("+")+2, eq1.indexOf("y"));
+		 valstr1[2] = eq1.substring(eq1.indexOf("=")+2);
+		for(int i=0;i<3;i++){
+			equation1[i] = Integer.parseInt(valstr1[i]);
+		}
+		for(int i=0;i<3;i++){
+			System.out.println(equation1[i]);
+		}
+//		System.out.println(v1);
+//		System.out.println(v2);
+//		System.out.println(v3);
+//		System.out.println();
+//		System.out.println(Det(2,3,3,2));
+//		System.out.println(Det(4,3,6,2));
+//		System.out.println(Det(2,4,3,6));
+		
+		
+	}
+	
+	public static int Det (int a,int b,int c,int d){
+		return a*d - b*c;
+	}
+	
+
+}

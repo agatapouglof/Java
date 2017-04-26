@@ -1,0 +1,48 @@
+
+public class res {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println("mio");
+		String[] operateurs = {"+","-","*","/"};
+		int retour ;
+		for(int i=0; i< operateurs.length ; i++  ){
+			if(operateurs[i].equals("*")){
+				retour = 2 * 2;
+				//System.out.println(retour);
+			}
+			
+			System.out.println(operateurs[i]);
+			
+			
+			
+		}
+		System.out.println(evaluate("1","2","3"));
+		System.out.println(calc(4,4,"+"));
+	}
+	public static Double evaluate(String a,String b,String c){
+		 
+		 return 1.00 ;
+	}
+	public static int calc (int a,int b ,String op){
+		int  ret = 0 ; //to return as result 
+		
+		switch(op){
+		case "+":
+			ret = a + b;
+			System.out.println(a);
+			System.out.println(b);
+			System.out.println(ret);
+		case "-":
+			ret = a - b;
+		case "*":
+			ret = a * b;
+		case "/":
+			ret = (int)Math.floor(a / b);
+			
+		}
+		return ret ; 
+	}
+	
+
+}

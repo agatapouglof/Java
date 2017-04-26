@@ -1,0 +1,51 @@
+import java.util.*;
+public class collection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int cases = sc.nextInt();
+		int m,r; //m = number of movies r= number of requests
+		String retour = "" ;
+		int search;//movie to search
+		ArrayList<Integer> stack = new ArrayList<Integer>(); 
+		for(int ts=0;ts<cases;ts++){
+			 m =sc.nextInt();
+			 r =sc.nextInt();
+			 retour = "";
+			 int temp;
+			 int f;
+			 for(int j=0;j<m;j++){
+				 stack.add(j+1);
+			 }
+//			 for(int k=0;k<m;k++){
+//				 System.out.println(stack.get(k));
+//			 } 
+			 for(int k=0;k<r;k++){
+				 search = sc.nextInt();
+				 for(int h=0;h<m;h++){
+					 if(stack.get(h) == search){
+						 if(h==0){
+							 retour = "" +h;
+						 }else{
+							 retour = retour + " " + h;
+						 }
+						temp = stack.get(h);	
+						for(int i=1;i<=h;i++){
+							stack.set(i, stack.get(i-1));
+						}
+						stack.set(0, temp);
+						for(f=0;f<stack.size();f++){
+							System.out.println(stack.get(f));
+						}
+						
+					 }
+				 }
+			 }
+			System.out.println(retour);
+			stack.clear();
+		}
+
+	}
+
+}

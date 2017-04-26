@@ -1,0 +1,47 @@
+import java.util.*;
+public class abc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int [] abc = new int[3];
+		int temp;
+        String ch;
+		String res="";
+			for(int i=0;i<3;i++){//lecture des valeurs donnees
+				
+				abc[i] = sc.nextInt();
+			}
+			
+			for(int i=0;i<2;i++){//lecture des valeurs donnees
+				for(int j=1;j<3;j++){
+					if(abc[i] > abc[j]){
+						temp = abc[i];
+						abc[i] = abc[j];
+						abc[j] = temp;
+					}
+				}
+			}
+//			for(int i=0;i<3;i++){
+//				System.out.println(abc[i]);
+//			}
+			
+			String ABC = sc.nextLine();
+			ch = String.valueOf(ABC.charAt(0));
+			for(int i=1;i<3;i++){
+				ABC.charAt(i);
+				
+			}
+			
+
+	}
+	public static int render(String val){
+		switch(val){
+		case "A" : return 0;
+					break;
+		case "B" : return 1; break;
+		case "C": return 2; break;
+		}
+	}
+
+}

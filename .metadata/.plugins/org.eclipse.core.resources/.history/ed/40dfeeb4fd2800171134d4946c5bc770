@@ -1,0 +1,17 @@
+import java.util.*;
+public class Excel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String inp = sc.nextLine();
+		String left;
+		String right;
+		String [] alphabet =  {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+		while(!inp.equals("R0C0")){
+			right = inp.substring(1, inp.indexOf("C"));
+			System.out.println(right);
+		}
+	}
+
+}

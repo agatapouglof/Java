@@ -1,0 +1,33 @@
+import java.security.GeneralSecurityException;
+import java.util.*;
+public class Excel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String inp = sc.nextLine();
+		String left="";
+		int nbrcol;
+		String right;
+		String [] alphabet =  {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+		while(!inp.equals("R0C0")){
+			right = inp.substring(1, inp.indexOf("C"));
+			System.out.println(right);
+			nbrcol = Integer.parseInt(inp.substring(inp.indexOf("C")+1));
+			System.out.println(nbrcol);
+			while(nbrcol > 0){
+				if(nbrcol > 26){
+					left = left+"Z";
+					nbrcol -=26;
+				}else{
+					left = left+alphabet[nbrcol-1];
+					nbrcol -= nbrcol;
+				}
+			}
+			System.out.println(left+""+right);
+			inp = sc.nextLine();
+		}
+	}
+
+
+}
