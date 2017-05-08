@@ -1,0 +1,22 @@
+import java.util.*;
+public class beautifulsquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int cases;
+//		ArrayList<ArrayList<Integer>> tab = new ArrayList<>();
+		int taille,val;
+		taille =sc.nextInt();
+		int [][]  tab = new int[taille][taille];
+		
+		for (int i = 0; i < taille; i++) {
+			for (int j = 0; j < taille; j++) {
+				val =sc.nextInt();
+				tab[i][j] = val;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class TheOwlandtheFox {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int length,val,temp;
+		String word;
+		int cases = sc.nextInt();
+		for(int i=0;i<cases;i++){
+			val = sc.nextInt();
+			word = ""+val;
+			length = word.length();
+			for (int j = length-1; j >= 0; j--) {
+				temp = Integer.parseInt(""+word.charAt(j));
+				System.out.println(" "+temp);
+				
+			}
+			
+		}
+	}
+
+}

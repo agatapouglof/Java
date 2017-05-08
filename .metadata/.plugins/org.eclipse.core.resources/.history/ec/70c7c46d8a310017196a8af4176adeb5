@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class TheOwlandtheFox {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int length,val,temp,index;
+		String word,res="";
+		int cases = sc.nextInt();
+		for(int i=0;i<cases;i++){
+			val = sc.nextInt();
+			if((val % 10) ==0){ val  = (val /10 -1) * 10;}
+			else{val--;}
+			System.out.println(val);
+//			word = ""+val;
+//			length = word.length();
+//			
+//				temp = Integer.parseInt(""+word.charAt(length-1));
+//				index  = length-1;
+//				while(temp==0){
+//					index--;
+//					temp = Integer.parseInt(""+word.charAt(index));
+//				}
+//				temp--;
+//				res = word.substring(0, index) +""+temp +""+word.substring(index+1);
+				
+			System.out.println(Integer.parseInt(res));
+			
+		}
+	}
+
+}

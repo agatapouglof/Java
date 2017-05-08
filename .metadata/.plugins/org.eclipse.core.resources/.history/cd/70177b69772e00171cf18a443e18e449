@@ -1,0 +1,44 @@
+import java.util.*;
+public class ProblemC {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> cycles = new ArrayList();
+		int cases = sc.nextInt();
+		long nombre,temp;
+		String string_case,tempo;
+		sc.nextLine();
+		boolean test;
+		for(int i = 0 ; i < cases ; i++){
+//			nombre = sc.nextLong();
+			string_case = sc.nextLine();
+			nombre = Integer.parseInt(string_case);
+			string_case = ""+nombre;
+			for(int j=1;j<string_case.length();j++){
+				tempo = string_case.substring(j) + string_case.substring(0, j);
+				temp = Long.parseLong(tempo);
+				cycles.add(tempo);
+//				System.out.println(tempo);
+			}
+			test = true;
+			for(int j=2;j<string_case.length()-1;j++){
+//				System.out.println("one");
+				temp = nombre * j;
+				if(!cycles.contains(""+temp)){
+					test =false;
+//					System.out.println("two");
+				}
+			}
+			if(test){
+				System.out.println(nombre +" is cyclic");
+			}else{
+				System.out.println(nombre +" is not cyclic");
+			}
+			
+			cycles.clear();
+		}
+		
+	}
+
+}

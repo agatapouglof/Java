@@ -1,0 +1,41 @@
+import java.util.*;
+public class beautifulsquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int cases;
+//		ArrayList<ArrayList<Integer>> tab = new ArrayList<>();
+		int taille,val,p,temp;
+		String aff="";
+		taille =sc.nextInt();
+		int [][]  tab = new int[taille][taille];
+		int [][]  tab1 = new int[taille][taille];
+		int [][]  tab2 = new int[taille][taille];
+		for (int i = 0; i < taille; i++) {
+			for (int j = 0; j < taille; j++) {
+				val =sc.nextInt();
+				tab[i][j] = val;
+			}
+		}
+		p= taille /2;
+		for (int i = 0; i < tab.length; i++) {
+			for (int j = 0; j < tab.length; j++) {
+//				temp = tab[i][j];
+				tab1[i][j] = tab[i][tab.length-1-j];
+			}
+		}
+		System.out.println("le p"+p);
+		// afficher 
+		for (int i = 0; i < taille; i++) {
+			aff="";
+			for (int j = 0; j < taille; j++) {
+				aff+= " "+tab1[i][j];
+				
+			}
+			System.out.println(aff);
+		}
+// fin afficher
+	}
+
+}

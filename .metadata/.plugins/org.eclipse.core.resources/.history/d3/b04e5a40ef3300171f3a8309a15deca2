@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class pot {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int cases = sc.nextInt();
+		int val,ret,som=0;
+		for (int i = 0; i < cases; i++) {
+			val = sc.nextInt();
+			ret = val % 10;
+			val/=10;
+//			System.out.println(val);
+			som += (int)Math.pow(ret, val);
+//			som+=val;
+			System.out.println(som);
+			
+		}
+		System.out.println(som);
+		sc.close();
+	}
+
+}
