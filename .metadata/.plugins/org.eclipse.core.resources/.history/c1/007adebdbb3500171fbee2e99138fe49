@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class Timebomb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String val;
+		
+		//String[][][] vals = new String [10][5][3] ;
+		String[][][] vals = {
+				{{"*","*","*"},{"*"," ","*"},{"*"," ","*"},{"*"," ","*"},{"*","*","*"}},
+				{{" "," ","*"},{" "," ","*"},{" "," ","*"},{" "," ","*"},{" "," ","*"}},
+				{{"*","*","*"},{" "," ","*"},{"*","*","*"},{"*"," ","  "},{"*","*","*"}},
+				{{"*","*","*"},{" "," ","*"},{"*","*","*"},{" "," ","*"},{"*","*","*"}},
+				{{"*"," ","*"},{"*"," ","*"},{"*","*","*"},{" "," ","*"},{" "," ","*"}},
+				{{"*","*","*"},{"*"," "," "},{"*","*","*"},{" "," ","*"},{"*","*","*"}},
+				{{"*","*","*"},{"*"," "," "},{"*","*","*"},{"*"," ","*"},{"*","*","*"}},
+				{{"*","*","*"},{" "," ","*"},{" "," ","*"},{" "," ","*"},{" "," ","*"}},
+				{{"*","*","*"},{"*"," ","*"},{"*","*","*"},{"*"," ","*"},{"*","*","*"}},
+				{{"*","*","*"},{"*"," ","*"},{"*","*","*"},{" "," ","*"},{"*","*","*"}}
+				};
+//		for (int k = 0; k < vals.length; k++) {
+//			for (int i = 0; i < 5; i++) {
+//				for (int j = 0; j < 3; j++) {
+//					System.out.print(vals[k][i][j]+" ");
+//				}
+//				//System.out.println();
+//				System.out.println();
+//			}
+//			System.out.println();
+//		}
+		val = sc.nextLine();
+		int temp = taille(val.length());
+		int length = val.length();
+		//System.out.println("length : "+ length+" temp : "+ temp);
+		int  index = 0; 
+		String[][][] tab = new String[temp][5][3];
+		for(int k=0;k<5;k++){
+			for (int i = 0; i < temp; i++) {
+			  	for (int j = 0; j < 3; j++) {
+				  tab[i][k][j] = ""+val.charAt(index);
+					index++;
+			  }
+			  	index++;
+			}
+			index = 0;
+			//sc.nextLine();
+			//System.out.println(val);
+			if(k<5){
+			val = sc.nextLine();}
+			//System.out.println(val);
+		}
+		for(int k=0;k<6;k++){
+			for (int i = 0; i < temp; i++) {
+			  	for (int j = 0; j < 3; j++) {
+				  System.out.print(tab[i][k][j]);
+				
+			  }
+			  	System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	static int taille(int val){
+		switch(val){
+		case 7: return 2;
+		case 11: return 3;
+		case 15: return 4;
+		case 19: return 5;
+		case 23: return 6;
+		case 27: return 7;
+		default : return 8;
+		
+		}
+	}
+
+}
