@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class zamka {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int L,D,X;
+//		L  = sc.nextInt();
+//		D = sc.nextInt();
+//		X = sc.nextInt();
+		System.out.println(sum(120));
+	}
+	static int sum(int a){// sum of digits of an integer
+		int val,res=0;
+		while(a>0){
+		res += a % 10;
+		a /= 10;
+		}
+		res +=a;
+		return res;
+	}
+
+}

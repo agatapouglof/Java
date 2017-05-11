@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ARealChallenge {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc =new Scanner (System.in);
+		float  val = sc.nextFloat();
+		val = (float)Math.sqrt(val) * 4;
+		System.out.println(val);
+		String [] test = (""+val).split(",");
+		if(test[1].equals("0")){
+			System.out.println(test[0]);
+		}else{System.out.println(val);}
+		
+	}
+
+}
+//8.94427190999915878564
